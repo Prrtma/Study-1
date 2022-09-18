@@ -1,0 +1,120 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+
+int main(void)
+{
+	char code;
+	int Sisi;
+	int Tinggi;
+	int Alas;
+	int Lebar;
+	int Panjang;
+	int Diameter;
+	int HasilKeliling;
+	int HasilLuas;
+	int JariJari;
+	float hling;
+	float koma;
+	
+	cout <<"Menu Untuk Menghitung luas dan keliling";
+	cout<<"\nPersegi";
+	cout<<"\nPersegi Panjang";
+	cout<<"\nSegitiga";
+	cout<<"\nInsert Kode : ";
+	cin>>code;
+	
+	if(code=='s'||code=='S'){
+		cout<<"Menu Keliling Segitiga";
+		cout<<"\nMasukan Alas Segitiga ";
+		cin>>Alas;
+		cout<<"Masukan Tinggi Segitiga ";
+		cin>>Tinggi;
+		
+		HasilKeliling=Alas*3;
+		cout<<"Hasil Keliling= "<<HasilKeliling;
+	}
+	
+	else if(code=='p'||code=='P'){
+		cout<<"Menu Keliling Persegi ";
+		cout<<"\nMasukan Sisi Persegi ";
+		cin>>Sisi;
+		
+		HasilKeliling=Sisi*4;
+		cout<<"Hasil Keliling= "<<HasilKeliling;
+	}
+	
+	else if(code=='k'||code=='K'){
+		cout<<"Menu Keliling Persegi Panjang";
+		cout<<"\nMasukan Panjang Persegi Panjang ";
+		cin>>Panjang;
+		cout<<"Masukan Lebar Persegi Panjang ";
+		cin>>Lebar;
+		
+		HasilKeliling=2*(Panjang+Lebar);
+		cout<<"Hasil Keliling= "<<HasilKeliling;
+	}
+	
+	else if(code=='l' || code=='L'){
+		cout<<"Menu Keliling Lingkaran";
+		cout<<"\nMasukan Diameter Lingkaran ";
+		cin>>Diameter;
+		
+		hling=3.14*Diameter; 
+		cout<<"Hasil Keliling= "<<hling;
+	}
+	
+	else if(code=='q'||code=='Q'){
+		cout<<"Menu Luas Lingkaran ";
+		cout<<"\nMasukan Jari Jari Lingkaran";
+		cin>>JariJari;
+		
+		hling=3.14*JariJari*JariJari;
+		cout<<"Hasil= "<<hling;
+	}
+	
+	else if(code=='a'||code=='A'){
+		cout<<"Menu Luas Persegi Panjang";
+		cout<<"\nMasukan Panjang Persegi Panjang " ;
+		cin>>Panjang;
+		cout<<"Masukan Lebar Persegi Panjang ";
+		cin>>Lebar;
+		
+		HasilLuas=Panjang*Lebar;
+		cout<<"Hasil= "<<HasilLuas;
+	}
+	
+	else if(code=='w'||code=='W'){
+		cout<<"Menu Luas Persegi";
+		cout<<"\nMasukan Panjang Persegi ";
+		cin>>Panjang;
+		cout<<"Masukan Lebar Persegi";
+		cin>>Lebar;
+		
+		HasilLuas=Panjang*Lebar;
+		cout<<"Hasil= "<<HasilLuas;
+	}
+	
+	else if(code=='d'||code=='D'){
+		cout<<"Menu Luas Segitiga";
+		cout<<"\nMasukan Alas Segitiga ";
+		cin>>Alas;
+		cout<<"Masukan Tinggi Segitiga ";
+		cin>>Tinggi;
+		
+		koma=0.5*Alas*Tinggi;
+		cout<<"Hasil= "<<koma;
+	}
+	
+	else {
+		cout<<"!! Erorr !!";
+		cout<<"\nKode 'S' Untuk Keliling Lingkaran";
+		cout<<"\nKode 'P' Untuk Keliling Persegi";
+		cout<<"\nKode 'K' Untuk Keliling Persegi Panjang";
+		cout<<"\nKode 'L' Untuk Keliling Lingkaran";
+		cout<<"\nKode 'Q' Untuk Luas Lingkaran";
+		cout<<"\nKode 'A' Untuk Luas Persegi Panjang";
+		cout<<"\nKode 'W' Untuk Luas Persegi";
+		cout<<"\nKode 'D' Untuk Luas Segitiga";
+	}
+}
